@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: rgb(201, 152, 61);
+}
+
+.container {
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.container header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container .inputField {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid grey;
+    font-size: 17px;
+    border-radius: 3px; 
+    padding-left: 15px;
+    outline: none;
+}
+
+.inputField button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    background-color: rgb(53, 172, 133);
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 5px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.inputField button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container .todolist {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todolist li {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: rgb(162, 159, 159);
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    color: white;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todolist li span {
+    position: absolute;
+    right: -45px;
+    color: white;
+    width: 45px;
+    text-align: center;
+    background: rgb(210, 71, 71);
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todolist li:hover span {
+    right: 0px;
+
+}
+
+.container .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.footer button {
+    border: none;
+    background-color: rgb(53, 172, 133);
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    margin-left: 3px;
+    padding: 6px 10px;
+    background-color: black;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.inputField button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
