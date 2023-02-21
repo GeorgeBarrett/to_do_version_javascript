@@ -86,7 +86,7 @@ body {
 
 .todolist li span {
     position: absolute;
-    right: -45px;
+    right: 0;
     color: white;
     width: 45px;
     text-align: center;
@@ -94,10 +94,6 @@ body {
     border-radius: 0 3px 3px 0;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.todolist li:hover span {
-    right: 0px;
 }
 
 .container .footer {
