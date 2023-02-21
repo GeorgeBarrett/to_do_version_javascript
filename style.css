@@ -55,14 +55,7 @@ body {
     border-radius: 3px;
     color: white;
     font-size: 22px;
-    cursor: pointer;
     margin-left: 5px;
-    opacity: 0.5;
-}
-
-.inputField button.active {
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .container .todolist {
@@ -80,7 +73,6 @@ body {
     margin-bottom: 8px;
     padding: 0 15px;
     color: white;
-    cursor: default;
     overflow: hidden;
 }
 
@@ -92,8 +84,6 @@ body {
     text-align: center;
     background: rgb(210, 71, 71);
     border-radius: 0 3px 3px 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .container .footer {
@@ -115,5 +105,4 @@ body {
     padding: 6px 10px;
     background-color: black;
     opacity: 0.8;
-    cursor: pointer;
 }
