@@ -65,3 +65,10 @@ function deleteTask(index) {
     showTasks();
 };
 
+
+// delete all button
+deleteAllBtn.onclick = () => {
+    listArr = [];
+    localStorage.setItem('Add a new thorn in my side', JSON.stringify(listArr));
+    showTasks();
+};
