@@ -9,8 +9,8 @@ inputBox.onkeyup = () => {
         addBtn.classList.add('active'); 
     } else {
         addBtn.classList.remove('active'); 
-    }
-}
+    };
+};
 
 showTasks();
 
@@ -26,4 +26,31 @@ addBtn.onclick = () => {
     localStorage.setItem('Add a new thorn in my side', JSON.stringify(listArr));
     showTasks();
     addBtn.classList.remove('active');
-}
+};
+
+
+// function to add task list inside ul
+function showTasks() {
+    let getLocalStorage = localStorage.getItem('Add a new thorn in my side');
+    if(getLocalStorage == null) {
+        listArr = [];
+    } else {
+        listArr = JSON.parse(getLocalStorage);
+    }
+
+    const pendingNumb = document.querySelector('.pendingNumb');
+    pendingNumb.textContent = listArr.length;
+    
+    if(listArr.length > 0){
+        deleteAllBtn.classList.add('active');
+    } else {
+        deleteAllBtn.classList.remove('active');
+    }
+
+    let newLiTag = '';
+    listArr.forEach((element, index) => {
+        newLiTag += `<li> ${element} <span onclick='deleteTask(${index})'; ><i class="fas fa-trash-alt"></i></span></li>`;
+    });
+    toDoList.innerHTML = newLiTag;
+    inputBox.value = '';
+};
