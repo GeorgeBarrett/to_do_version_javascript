@@ -54,3 +54,14 @@ function showTasks() {
     toDoList.innerHTML = newLiTag;
     inputBox.value = '';
 };
+
+
+// delete task function
+function deleteTask(index) {
+    let getLocalStorage = localStorage.getItem('Add a new thorn in my side');
+    listArr = JSON.parse(getLocalStorage);
+    listArr.splice(index, 1);
+    localStorage.setItem('Add a new thorn in my side', JSON.stringify(listArr));
+    showTasks();
+};
+
